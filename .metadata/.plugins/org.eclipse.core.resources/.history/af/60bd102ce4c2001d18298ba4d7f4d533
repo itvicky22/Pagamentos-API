@@ -1,0 +1,45 @@
+package uea.pagamentos_api.services;
+
+import java.util.List;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import uea.pagamentos_api.models.Lancamento;
+import uea.pagamentos_api.models.Pessoa;
+import uea.pagamentos_api.repositories.LancamentoRepository;
+
+@Service
+public class LancamentoService {
+
+	@Autowired
+	private LancamentoRepository lancamentoRepository;
+
+	public Pessoa criar(Pessoa Pessoa) {
+		return lancamentoRepository.save(Pessoa);
+	}
+
+	public List<Lancamento> listar() {
+		return lancamentoRepository.findAll();
+	}
+
+	public Pessoa buscarPorCodigo(Long codigo) {
+		Pessoa Lancamento = lancamentoRepository.findById(codigo).orElseThrow(); // se vier null a gente ja lança uma
+																					// exceção, se nao ele retorna
+																					// Pessoa
+		return Lancamento;
+	}
+
+	public void excluir(Long codigo) {
+		lancamentoRepository.deleteById(codigo);
+	}
+
+	public Pessoa atualizar(Long codigo, Pessoa Pessoa) {
+		Pessoa lancamentoSalva = lancamentoRepository.findById(codigo).orElseThrow();
+		BeanUtils.copyProperties(Pessoa, lancamentoSalva, "codigo"); // atualizaçao em memoria
+
+		return lancamentoRepository.save(lancamentoSalva);
+	}
+
+}

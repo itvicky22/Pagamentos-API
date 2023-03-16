@@ -1,0 +1,5 @@
+package uea.pagamentos_api;
+
+public enum TipoLancamento {
+
+}

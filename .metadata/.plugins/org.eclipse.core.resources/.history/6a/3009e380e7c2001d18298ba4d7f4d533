@@ -1,0 +1,5 @@
+package uea.pagamentos_api.enumsA;
+
+public enum TipoLancamento {
+	RECEITA, DESPESA;
+}

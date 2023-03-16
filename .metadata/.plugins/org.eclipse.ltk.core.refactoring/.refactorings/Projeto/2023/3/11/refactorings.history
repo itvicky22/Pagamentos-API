@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;CategoriaRepository.java&apos; to &apos;pagamentos-api/src/main/java/uea.pagamentos_api.repositories&apos;&#x0D;&#x0A;- Original project: &apos;Projeto&apos;&#x0D;&#x0A;- Destination element: &apos;pagamentos-api/src/main/java/uea.pagamentos_api.repositories&apos;&#x0D;&#x0A;- Original element: &apos;CategoriaRepository.java&apos;" description="Copy file" destination="=pagamentos-api/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;uea.pagamentos_api.repositories" element1="pagamentos-api/src/main/java/uea/pagamentos_api/repositories/CategoriaRepository.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1678849312436" units="0" version="1.0"/>
+</session>
